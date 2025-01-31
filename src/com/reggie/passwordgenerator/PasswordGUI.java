@@ -3,6 +3,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import java.awt.GridLayout;
 
@@ -36,12 +37,19 @@ public class PasswordGUI {
     private void setupGUI() {
         JPanel panel = new JPanel();
         // 6 rows, 2 columns, with gaps
-        panel.setLayout(new GridLayout(6, 2, 10, 10));
+        panel.setLayout(new GridLayout(7, 2, 20, 20));
+        // Add padding
+        panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
 
         // Add length input
         panel.add(new JLabel("Password Length"));
-        lengthField = new JTextField(10);
+        lengthField = new JTextField(2);
         panel.add(lengthField);
+
+        // Add text input
+        panel.add(new JLabel("Number of Letters"));
+        lettersField = new JTextField(2);
+        panel.add(lettersField);
 
 
 
