@@ -47,9 +47,14 @@ public class PasswordGUI {
         panel.add(lengthField);
 
         // Add text input
-        panel.add(new JLabel("Number of Letters"));
-        lettersField = new JTextField(2);
+        panel.add(new JLabel("Frequency of Letters"));
+        lettersField = new JTextField(50);
         panel.add(lettersField);
+
+        // Add numbers input
+        panel.add(new JLabel("Frequency of Numbers"));
+        numbersField = new JTextField(15);
+        panel.add(numbersField);
 
 
 
