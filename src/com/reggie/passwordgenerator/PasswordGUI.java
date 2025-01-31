@@ -47,7 +47,7 @@ public class PasswordGUI {
         JLabel lengthLabel = new JLabel("Password Length");
         JLabel lettersLabel = new JLabel("Frequency of Letters");
         JLabel numbersLabel = new JLabel("Frequency of Numbers");
-        JLabel specialLabel = new JLabel("Frequency of Special Charactes");
+        JLabel specialsLabel = new JLabel("Frequency of Special Charactes");
 
         lengthField = new JTextField(15);
         lettersField = new JTextField(15);
@@ -57,6 +57,17 @@ public class PasswordGUI {
         resultField = new JTextField(30);
         resultField.setEditable(false);
 
+        // Add all components to panel
+        panel.add(lengthLabel);
+        panel.add(lengthField);
+        panel.add(lettersLabel);
+        panel.add(lettersField);
+        panel.add(numbersLabel);
+        panel.add(numbersField);
+        panel.add(specialsLabel);
+        panel.add(specialsField);
+        panel.add(generateButton);
+        panel.add(resultField);
 
 
 
