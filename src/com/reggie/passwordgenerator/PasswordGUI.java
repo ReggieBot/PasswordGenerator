@@ -35,6 +35,17 @@ public class PasswordGUI {
     // GUI components
     private void setupGUI() {
         JPanel panel = new JPanel();
+        // 6 rows, 2 columns, with gaps
+        panel.setLayout(new GridLayout(6, 2, 10, 10));
+
+        // Add length input
+        panel.add(new JLabel("Password Length"));
+        lengthField = new JTextField(10);
+        panel.add(lengthField);
+
+
+
+
         gui.add(panel);
     }
 
