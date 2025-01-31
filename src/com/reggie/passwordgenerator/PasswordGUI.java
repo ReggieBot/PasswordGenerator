@@ -1,11 +1,24 @@
 package com.reggie.passwordgenerator;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.GridLayout;
 
 
 public class PasswordGUI {
     // Basic JFrame (window)
     private JFrame gui;
+
+    // Component Initialization
+    private JTextField lengthField;
+    private JTextField lettersField;
+    private JTextField numbersField;
+    private JTextField SpecialsField;
+    private JTextField resultField;
+    private JButton generateButton;
+    
 
     // Constructor
     public PasswordGUI() {
