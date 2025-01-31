@@ -38,10 +38,11 @@ public class PasswordGUI {
 
     // GUI components
     private void setupGUI() {
-        JPanel panel = new JPanel();
+        layout = new SpringLayout();
+        JPanel panel = new JPanel(layout);
         // 6 rows, 2 columns, with gaps
         
-        panel.setLayout(layout);
+        //panel.setLayout(layout);
 
         // Add padding
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
@@ -81,31 +82,32 @@ public class PasswordGUI {
         
         // Letters field
         layout.putConstraint(SpringLayout.WEST, lettersLabel, 20, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, lettersLabel, 40, SpringLayout.NORTH, lengthLabel);
+        layout.putConstraint(SpringLayout.NORTH, lettersLabel, 20, SpringLayout.NORTH, lengthLabel);
         layout.putConstraint(SpringLayout.WEST, lettersField, 20, SpringLayout.EAST, lettersLabel);
-        layout.putConstraint(SpringLayout.NORTH, lettersField, 40, SpringLayout.NORTH, lengthField);
+        layout.putConstraint(SpringLayout.NORTH, lettersField, 20, SpringLayout.NORTH, lengthField);
 
         // Numbers row
         layout.putConstraint(SpringLayout.WEST, numbersLabel, 20, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, numbersLabel, 40, SpringLayout.SOUTH, lettersLabel);
+        layout.putConstraint(SpringLayout.NORTH, numbersLabel, 20, SpringLayout.SOUTH, lettersLabel);
         layout.putConstraint(SpringLayout.WEST, numbersField, 20, SpringLayout.EAST, numbersLabel);
-        layout.putConstraint(SpringLayout.NORTH, numbersField, 40, SpringLayout.SOUTH, lettersField);
+        layout.putConstraint(SpringLayout.NORTH, numbersField, 20, SpringLayout.SOUTH, lettersField);
        
         // Specials row
         layout.putConstraint(SpringLayout.WEST, specialsLabel, 20, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, specialsLabel, 40, SpringLayout.SOUTH, numbersLabel);
+        layout.putConstraint(SpringLayout.NORTH, specialsLabel, 20, SpringLayout.SOUTH, numbersLabel);
         layout.putConstraint(SpringLayout.WEST, specialsField, 20, SpringLayout.EAST, specialsLabel);
-        layout.putConstraint(SpringLayout.NORTH, specialsField, 40, SpringLayout.SOUTH, numbersField);
+        layout.putConstraint(SpringLayout.NORTH, specialsField, 20, SpringLayout.SOUTH, numbersField);
        
         // Generate button
         layout.putConstraint(SpringLayout.WEST, generateButton, 20, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, generateButton, 40, SpringLayout.SOUTH, specialsLabel);
+        layout.putConstraint(SpringLayout.NORTH, generateButton, 20, SpringLayout.SOUTH, specialsLabel);
        
         // Result field
         layout.putConstraint(SpringLayout.WEST, resultField, 20, SpringLayout.EAST, generateButton);
-        layout.putConstraint(SpringLayout.NORTH, resultField, 40, SpringLayout.SOUTH, specialsField);
+        layout.putConstraint(SpringLayout.NORTH, resultField, 20, SpringLayout.SOUTH, specialsField);
        
         gui.add(panel);
+        gui.setVisible(true);
     }
 
     // Event listeners
