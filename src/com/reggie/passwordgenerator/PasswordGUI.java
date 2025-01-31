@@ -5,7 +5,8 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-import java.awt.GridLayout;
+import javax.swing.BorderFactory;
+import javax.swing.SpringLayout;
 
 
 public class PasswordGUI {
@@ -16,7 +17,7 @@ public class PasswordGUI {
     private JTextField lengthField;
     private JTextField lettersField;
     private JTextField numbersField;
-    private JTextField SpecialsField;
+    private JTextField specialsField;
     private JTextField resultField;
     private JButton generateButton;
     
@@ -37,24 +38,24 @@ public class PasswordGUI {
     private void setupGUI() {
         JPanel panel = new JPanel();
         // 6 rows, 2 columns, with gaps
-        panel.setLayout(new GridLayout(7, 2, 20, 20));
+  
+
         // Add padding
-        panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        // Add length input
-        panel.add(new JLabel("Password Length"));
-        lengthField = new JTextField(2);
-        panel.add(lengthField);
+        // Create components
+        JLabel lengthLabel = new JLabel("Password Length");
+        JLabel lettersLabel = new JLabel("Frequency of Letters");
+        JLabel numbersLabel = new JLabel("Frequency of Numbers");
+        JLabel specialLabel = new JLabel("Frequency of Special Charactes");
 
-        // Add text input
-        panel.add(new JLabel("Frequency of Letters"));
-        lettersField = new JTextField(50);
-        panel.add(lettersField);
-
-        // Add numbers input
-        panel.add(new JLabel("Frequency of Numbers"));
+        lengthField = new JTextField(15);
+        lettersField = new JTextField(15);
         numbersField = new JTextField(15);
-        panel.add(numbersField);
+        specialsField = new JTextField(15);
+        generateButton = new JButton("Generate Password");
+        resultField = new JTextField(30);
+        resultField.setEditable(false);
 
 
 
