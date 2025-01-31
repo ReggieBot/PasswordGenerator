@@ -5,7 +5,6 @@ public class Main {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             PasswordGUI gui = new PasswordGUI();
-            gui.setVisible(true);
         });
     }
 }
