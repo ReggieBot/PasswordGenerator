@@ -22,5 +22,10 @@ public class PasswordGUI {
             System.err.println("Failed to initialize Flatlaf");
         }
 
+        // Frame setup
+        frame = new JFrame("Password Generator");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // 
     }
 }
