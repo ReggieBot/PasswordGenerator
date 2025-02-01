@@ -26,6 +26,13 @@ public class PasswordGUI {
         frame = new JFrame("Password Generator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // 
+        // Component Initialization
+        lengthField = new JTextField(15);
+        lettersField = new JTextField(15);
+        numbersField = new JTextField(15);
+        specialsField = new JTextField(15);
+        resultField = new JTextField(20);
+        resultField.setEditable(false);
+        generateButton = new JButton("Generate Password");
     }
 }
