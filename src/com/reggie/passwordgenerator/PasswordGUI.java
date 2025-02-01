@@ -23,6 +23,7 @@ public class PasswordGUI {
     private JButton generateButton;
     private SpringLayout layout;
     
+    
 
     // Constructor
     public PasswordGUI() {
