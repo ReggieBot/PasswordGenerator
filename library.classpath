@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <!-- Source folder -->
+    <classpathentry kind="src" path="src"/>
+    <!-- External libraries -->
+    <classpathentry kind="lib" path="lib/flatlaf-3.4.jar"/>
+    <classpathentry kind="lib" path="lib/miglayout-swing-11.0.jar"/>
+    <!-- Output folder -->
+    <classpathentry kind="output" path="bin"/>
+</classpath>
