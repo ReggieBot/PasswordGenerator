@@ -41,5 +41,18 @@ public class PasswordGUI {
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
         // Add labels and fields in pairs
+        panel.add(new JLabel("Password Length:"));
+        panel.add(lengthField);
+
+        panel.add(new JLabel("Frequency of Letters:"));
+        panel.add(lettersField);
+
+        panel.add(new JLabel("Frequency of Numbers"));
+        panel.add(numbersField);
+
+        panel.add(new JLabel("Frequency of Special Characters"));
+        panel.add(specialsField);
+
+        
     }
 }
