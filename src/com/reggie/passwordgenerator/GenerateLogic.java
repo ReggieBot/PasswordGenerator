@@ -24,5 +24,29 @@ public class GenerateLogic {
         String specials = "!@#$%^&*()-_=+[]{}|;:,.<>?";
 
         // Using StringBuilder to build password character by character
+        StringBuilder password = new StringBuilder();
+        Random random = new Random();
+
+        // Generate each character in the password
+        for (int i = 0; i < length; i++) {
+
+            // Gets a random number within the range of the total weight
+            int targetWeight = random.nextInt(totalWeight);
+
+            // Determines the character type based on the weights
+            if (targetWeight < letterWeight) {
+                // Random letter selected and appended to password
+                password.append(letters.charAt(random.nextInt(letters.length())));
+            } else if (targetWeight < letterWeight + numberWeight) {
+                 // Random number selected and appended to password
+                password.append(numbers.charAt(random.nextInt(numbers.length())));
+            } else {
+                // Random special character selected and appended to password
+                password.append(specials.charAt(random.nextInt(specials.length())));
+            }
+        }
+
+       // Return generated password as type String
+       return password.toString();
     }
 }
