@@ -78,7 +78,19 @@ public class PasswordGUI {
                 int specialWeight = Integer.parseInt(specialsField.getText());
 
                 // Generate password using GenerateLogic class
+                String password = GenerateLogic.generatePassword(length, letterWeight, numberWeight, specialWeight);
+
+                // Set result field to new generated password
+                resultField.setText(password);
+
+            } catch (NumberFormatException ex) {
+                // Display error message if input is invalid (not type Int)
+                resultField.setText("Please enter valid numbers in all fields.");
+            } catch (IllegalArgumentException ex) {
+                // Display error message if GenerateLogic produces error
+                resultField.setText(ex.getMessage());
             }
+            
         });
     }
 
