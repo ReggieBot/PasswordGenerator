@@ -58,5 +58,15 @@ public class PasswordGUI {
 
         // Add the result field spanning both columns + allows horizontal expansion
         panel.add(resultField, "span, growx");
+
+        // Add panel to frame, pack, and center window
+        frame.add(panel);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+
+        setupActions();
     }
+
+    
 }
