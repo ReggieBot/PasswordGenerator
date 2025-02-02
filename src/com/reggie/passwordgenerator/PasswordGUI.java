@@ -34,5 +34,12 @@ public class PasswordGUI {
         resultField = new JTextField(20);
         resultField.setEditable(false);
         generateButton = new JButton("Generate Password");
+
+        // Using MigLayout for panel
+        JPanel panel = new JPanel(new MigLayout("wrap 2", "[right]10[grow, fill]", "[]10[]"));
+        // Panel padding
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        // Add labels and fields in pairs
     }
 }
