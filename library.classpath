@@ -3,8 +3,10 @@
     <!-- Source folder -->
     <classpathentry kind="src" path="src"/>
     <!-- External libraries -->
-    <classpathentry kind="lib" path="lib/flatlaf-3.4.jar"/>
-    <classpathentry kind="lib" path="lib/miglayout-swing-11.0.jar"/>
+    <classpathentry kind="lib" path="lib/flatlaf-3.5.4.jar"/>
+    <classpathentry kind="lib" path="lib/miglayout-swing-4.3-20121116.151626-3.jar"/>
+    <classpathentry kind="lib" path="lib/miglayout-core-4.3-20121116.151612-3.jar"/>
+
     <!-- Output folder -->
     <classpathentry kind="output" path="bin"/>
 </classpath>

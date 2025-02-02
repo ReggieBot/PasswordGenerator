@@ -68,5 +68,10 @@ public class PasswordGUI {
         setupActions();
     }
 
-    
+    private void setupActions() {
+        generateButton.addActionListener(e -> {
+            resultField.setText("GeneratedPassword");
+        });
+    }
+
 }
