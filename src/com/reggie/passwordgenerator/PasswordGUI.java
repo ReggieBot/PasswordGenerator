@@ -53,6 +53,10 @@ public class PasswordGUI {
         panel.add(new JLabel("Frequency of Special Characters"));
         panel.add(specialsField);
 
-        
+        // Add the generate button spanning both columns + centered
+        panel.add(generateButton, "span, center");
+
+        // Add the result field spanning both columns + allows horizontal expansion
+        panel.add(resultField, "span, growx");
     }
 }
