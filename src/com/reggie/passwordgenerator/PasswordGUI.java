@@ -47,10 +47,10 @@ public class PasswordGUI {
         panel.add(new JLabel("Frequency of Letters:"));
         panel.add(lettersField);
 
-        panel.add(new JLabel("Frequency of Numbers"));
+        panel.add(new JLabel("Frequency of Numbers:"));
         panel.add(numbersField);
 
-        panel.add(new JLabel("Frequency of Special Characters"));
+        panel.add(new JLabel("Frequency of Special Characters:"));
         panel.add(specialsField);
 
         // Add the generate button spanning both columns + centered
