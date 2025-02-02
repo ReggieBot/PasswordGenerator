@@ -70,7 +70,15 @@ public class PasswordGUI {
 
     private void setupActions() {
         generateButton.addActionListener(e -> {
-            resultField.setText("GeneratedPassword");
+            try {
+                // Parse the input values from textFields to type Int
+                int length = Integer.parseInt(lengthField.getText());
+                int letterWeight = Integer.parseInt(lettersField.getText());
+                int numberWeight = Integer.parseInt(numbersField.getText());
+                int specialWeight = Integer.parseInt(specialsField.getText());
+
+                // Generate password using GenerateLogic class
+            }
         });
     }
 
