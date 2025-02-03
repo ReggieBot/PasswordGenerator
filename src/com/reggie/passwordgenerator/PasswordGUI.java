@@ -3,7 +3,9 @@ package com.reggie.passwordgenerator;
 import javax.swing.*;
 import com.formdev.flatlaf.FlatDarculaLaf;
 import net.miginfocom.swing.MigLayout;
-import java.awt.*;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 
 public class PasswordGUI {
     private JFrame frame;
@@ -13,6 +15,7 @@ public class PasswordGUI {
     private JTextField specialsField;
     private JTextField resultField;
     private JButton generateButton;
+    private JButton copyClipboard;
 
     public PasswordGUI() {
         // Set up Flatlaf
@@ -34,6 +37,8 @@ public class PasswordGUI {
         resultField = new JTextField(20);
         resultField.setEditable(false);
         generateButton = new JButton("Generate Password");
+        copyClipboard = new JButton("Copy to Clipboard");
+        copyClipboard.setText("Copy to Clipboard");
 
         // Using MigLayout for panel
         JPanel panel = new JPanel(new MigLayout("wrap 2", "[right]10[grow, fill]", "[]10[]"));
@@ -58,6 +63,8 @@ public class PasswordGUI {
 
         // Add the result field spanning both columns + allows horizontal expansion
         panel.add(resultField, "span, growx");
+
+        panel.add(copyClipboard, "span, center");
 
         // Add panel to frame, pack, and center window
         frame.add(panel);
@@ -91,6 +98,22 @@ public class PasswordGUI {
                 resultField.setText(ex.getMessage());
             }
             
+        });
+
+        // Copy to clipboard
+        copyClipboard.addActionListener(e -> {
+            // Get the generated password from the result field
+            String generatedPassword = resultField.getText();
+
+            // Create StringSelection containing the password
+            StringSelection stringSelection = new StringSelection(generatedPassword);
+
+            // Get the system clipboard and set content
+            Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+            clipboard.setContents(stringSelection, null);
+
+            // Show dialog box alerting user that password has been copied
+            JOptionPane.showMessageDialog(frame, "Copied!");
         });
     }
 
