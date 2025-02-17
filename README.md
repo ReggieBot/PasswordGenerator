@@ -1,6 +1,6 @@
 # PasswordGenerator
 --------------------------------------------------------------------------------------------------------------------------------------------
-Custom password generator build in Java using JavaSwing GUI components.
+Custom password generator built in Java using JavaSwing GUI components.
 --------------------------------------------------------------------------------------------------------------------------------------------
 GUI layout uses MigLayout
 (https://www.miglayout.com/)
